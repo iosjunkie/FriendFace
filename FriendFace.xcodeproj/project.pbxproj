@@ -14,6 +14,8 @@
 		E25A845823C7888E00826082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25A845723C7888E00826082 /* Assets.xcassets */; };
 		E25A845B23C7888E00826082 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25A845A23C7888E00826082 /* Preview Assets.xcassets */; };
 		E25A845E23C7888E00826082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A845C23C7888E00826082 /* LaunchScreen.storyboard */; };
+		E25A846623C788A300826082 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A846523C788A300826082 /* User.swift */; };
+		E25A846823C788AE00826082 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A846723C788AE00826082 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E25A845A23C7888E00826082 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E25A845D23C7888E00826082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E25A845F23C7888E00826082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25A846523C788A300826082 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E25A846723C788AE00826082 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				E25A845F23C7888E00826082 /* Info.plist */,
 				E25A845223C7888C00826082 /* FriendFace.xcdatamodeld */,
 				E25A845923C7888E00826082 /* Preview Content */,
+				E25A846523C788A300826082 /* User.swift */,
+				E25A846723C788AE00826082 /* Friend.swift */,
 			);
 			path = FriendFace;
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 				E25A845423C7888C00826082 /* FriendFace.xcdatamodeld in Sources */,
 				E25A844F23C7888C00826082 /* AppDelegate.swift in Sources */,
 				E25A845623C7888C00826082 /* ContentView.swift in Sources */,
+				E25A846823C788AE00826082 /* Friend.swift in Sources */,
+				E25A846623C788A300826082 /* User.swift in Sources */,
 				E25A845123C7888C00826082 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
