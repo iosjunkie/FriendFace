@@ -16,6 +16,7 @@
 		E25A845E23C7888E00826082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25A845C23C7888E00826082 /* LaunchScreen.storyboard */; };
 		E25A846623C788A300826082 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A846523C788A300826082 /* User.swift */; };
 		E25A846823C788AE00826082 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A846723C788AE00826082 /* Friend.swift */; };
+		E25A846A23C7971500826082 /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A846923C7971500826082 /* FriendsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E25A845F23C7888E00826082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E25A846523C788A300826082 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E25A846723C788AE00826082 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E25A846923C7971500826082 /* FriendsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				E25A844D23C7888C00826082 /* FriendFace */,
-				E25A844C23C7888C00826082 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +58,7 @@
 				E25A844B23C7888C00826082 /* FriendFace.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E25A844D23C7888C00826082 /* FriendFace */ = {
@@ -72,6 +74,8 @@
 				E25A845923C7888E00826082 /* Preview Content */,
 				E25A846523C788A300826082 /* User.swift */,
 				E25A846723C788AE00826082 /* Friend.swift */,
+				E25A846923C7971500826082 /* FriendsList.swift */,
+				E25A844C23C7888C00826082 /* Products */,
 			);
 			path = FriendFace;
 			sourceTree = "<group>";
@@ -155,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25A846A23C7971500826082 /* FriendsList.swift in Sources */,
 				E25A845423C7888C00826082 /* FriendFace.xcdatamodeld in Sources */,
 				E25A844F23C7888C00826082 /* AppDelegate.swift in Sources */,
 				E25A845623C7888C00826082 /* ContentView.swift in Sources */,
