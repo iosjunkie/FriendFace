@@ -30,7 +30,6 @@ struct User: Codable, Identifiable {
             }
         }
         
-        print(cdUsers.count)
         if cdUsers.count > 0 {
             users = cdUsers
             print("from cdusers")
@@ -57,7 +56,6 @@ struct User: Codable, Identifiable {
                 if let decodedUsers = try? JSONDecoder().decode([User].self, from: data) {
                     users = decodedUsers
                     print("from users")
-                    
                     semaphore.signal()
                 }
             }.resume()
@@ -71,15 +69,15 @@ struct User: Codable, Identifiable {
     static func fetchCoreData() -> [User] {
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request = NSFetchRequest<CDUser>(entityName: "CDUser")
+        request.returnsObjectsAsFaults = false
         var users = [User]()
         
         moc.performAndWait {
             let results: [CDUser] = try! request.execute()
             for user in results {
                 var friends = [Friend]()
-                for friend in user.friends! {
-                    let friend = friend as! Friend
-                    friends.append(Friend(id: friend.id, name: friend.name))
+                for friend in user.friends!.allObjects as! [CDFriend] {
+                    friends.append(Friend(id: friend.id!, name: friend.name!))
                 }
                 
                 users.append(User(id: user.id!, name: user.name!, age: user.age, company: user.company!, friends: friends))
@@ -97,11 +95,15 @@ struct User: Codable, Identifiable {
                 cdUser.name = user.name
                 cdUser.age = Int16(user.age)
                 cdUser.company = user.company
-                var friends = [Friend]()
+                
+                
                 user.friends.forEach { friend in
-                    friends.append(friend)
+                    let cdFriend = CDFriend(context: moc)
+                    
+                    cdFriend.id = friend.id
+                    cdFriend.name = friend.name
+                    cdFriend.user = cdUser
                 }
-                cdUser.friends?.addingObjects(from: friends)
             }
         }
         
